@@ -149,4 +149,10 @@
 
         return $first_img;
     }
+    
+    function Uazoh_remove_help_tabs($old_help, $screen_id, $screen){
+        $screen->remove_help_tabs();
+        return $old_help;
+    }
+    add_filter('contextual_help', 'Uazoh_remove_help_tabs', 10, 3 );
 ?>
