@@ -1136,7 +1136,7 @@ a:hover {
 	margin-bottom: 0
 }
 
-.col-rt .wpyou_widget_SpecialCatPicPosts ul li {
+.col-rt .wpsky_widget_SpecialCatPicPosts ul li {
 	margin-bottom: 15px;
 	padding: 0 0 15px;
 	height: auto;
@@ -1144,25 +1144,25 @@ a:hover {
 	background: none
 }
 
-.col-rt .wpyou_widget_SpecialCatPicPosts ul li img {
+.col-rt .wpsky_widget_SpecialCatPicPosts ul li img {
 	float: left;
 	padding-right: 10px;
 	width: 100px;
 	height: 75px
 }
 
-.col-rt .wpyou_widget_SpecialCatPicPosts ul li h4 {
+.col-rt .wpsky_widget_SpecialCatPicPosts ul li h4 {
 	margin-bottom: 0;
 	line-height: 20px;
 	font-size: 14px;
 	overflow: hidden
 }
 
-.col-rt .wpyou_widget_SpecialCatPicPosts ul li p {
+.col-rt .wpsky_widget_SpecialCatPicPosts ul li p {
 	color: #666
 }
 
-.col-rt .wpyou_widget_SpecialCatBigPicPosts ul li {
+.col-rt .wpsky_widget_SpecialCatBigPicPosts ul li {
 	margin: 0 auto 20px;
 	padding: 0;
 	height: auto;
@@ -1170,12 +1170,12 @@ a:hover {
 	background: none
 }
 
-.col-rt .wpyou_widget_SpecialCatBigPicPosts ul li img {
+.col-rt .wpsky_widget_SpecialCatBigPicPosts ul li img {
 	width: 228px;
 	height: 170px
 }
 
-.col-rt .wpyou_widget_SpecialCatBigPicPosts ul li h4 {
+.col-rt .wpsky_widget_SpecialCatBigPicPosts ul li h4 {
 	margin-bottom: 0;
 	line-height: 18px;
 	font-size: 14px;
@@ -1946,21 +1946,21 @@ a:hover {
 	background: #333
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatList ul {
+.sidebar ul li.wpsky_widget_SpecialCatList ul {
 	padding: 0
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatList ul li {
+.sidebar ul li.wpsky_widget_SpecialCatList ul li {
 	height: auto;
 	background: url(../images/arrow.gif) no-repeat 3px 10px
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatList ul li ul li {
+.sidebar ul li.wpsky_widget_SpecialCatList ul li ul li {
 	line-height: 20px;
 	background: url(../images/arrow-sub.gif) no-repeat 3px 7px
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatPicPosts ul li {
+.sidebar ul li.wpsky_widget_SpecialCatPicPosts ul li {
 	margin-bottom: 15px;
 	padding: 0 0 15px;
 	height: auto;
@@ -1968,14 +1968,14 @@ a:hover {
 	background: none
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatPicPosts ul li img {
+.sidebar ul li.wpsky_widget_SpecialCatPicPosts ul li img {
 	float: left;
 	padding-right: 10px;
 	width: 110px;
 	height: 80px
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatPicPosts ul li h4 {
+.sidebar ul li.wpsky_widget_SpecialCatPicPosts ul li h4 {
 	margin-bottom: 5px;
 	height: 54px;
 	line-height: 18px;
@@ -1983,11 +1983,11 @@ a:hover {
 	overflow: hidden
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatPicPosts ul li p {
+.sidebar ul li.wpsky_widget_SpecialCatPicPosts ul li p {
 	color: #666
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatBigPicPosts ul li {
+.sidebar ul li.wpsky_widget_SpecialCatBigPicPosts ul li {
 	margin-bottom: 15px;
 	padding: 0 5px;
 	12px;height: auto;
@@ -1995,12 +1995,12 @@ a:hover {
 	background: none
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatBigPicPosts ul li img {
+.sidebar ul li.wpsky_widget_SpecialCatBigPicPosts ul li img {
 	width: 240px;
 	height: 180px
 }
 
-.sidebar ul li.wpyou_widget_SpecialCatBigPicPosts ul li h4 {
+.sidebar ul li.wpsky_widget_SpecialCatBigPicPosts ul li h4 {
 	margin-bottom: 10px;
 	line-height: 18px;
 	font-size: 14px;
@@ -2866,7 +2866,7 @@ a:hover {
 	}
 
 	.header .inner {
-		width: 96%;
+		width: 100%;
 		height: 118px
 	}
 
