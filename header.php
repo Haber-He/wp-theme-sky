@@ -26,7 +26,7 @@
   <link rel="pingback" href="<?php bloginfo('template_url'); ?>/xmlrpc.php" /> 
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.8.2.min.js"></script> 
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider.min.js"></script> 
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/wpyou.js"></script> 
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/wpsky.js"></script> 
   <!--[if lt IE 9]> <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/respond.js"></script> <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/html5.js"></script> <![endif]--> 
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/wow.min.js"></script> 
   <script type="text/javascript">new WOW().init();</script> 
