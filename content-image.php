@@ -26,5 +26,5 @@
 <div class="clearfix"></div>
 
 <div class="wpagenavi">
-    <?php par_pagenavi($limit); ?>
+    <?php par_pagenavi(''); ?>
 </div>

@@ -12,7 +12,8 @@
             $cat = get_query_var('cat');
             $yourcat = get_category($cat);
             $cat_id = $yourcat->term_id;
-            $cat_template = $yourcat->cat_template;
+                
+            $limit = get_option('posts_per_page');
             
             if ( !empty($cat_id) ):
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -25,7 +26,7 @@
                 $posts = query_posts($args);
         ?>
         
-            <?php get_template_part('content', 'image'); ?>
+            <?php get_template_part('content', get_cat_templage($cat_id)); ?>
             
         <?php endif; wp_reset_postdata();?>
         <?php endif; ?>

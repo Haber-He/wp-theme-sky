@@ -251,5 +251,13 @@
         }
     }
     
+    function get_cat_templage($cat_id){
+        
+        $template = get_option('cat-template-'.$cat_id);
+        
+        if ( empty($template) ) $template = 'list';
+        
+        return $template;
+    }
     
 ?>
