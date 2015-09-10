@@ -1,6 +1,8 @@
 <?php
 
     add_theme_support( 'nav-menus' );
+    
+    require_once( dirname(__FILE__).'/category_field.php' );
 
     if(function_exists('register_nav_menus')){
         register_nav_menus( array( 
@@ -246,7 +248,8 @@
             */
          
             echo '</div>';
-
         }
     }
+    
+    
 ?>
