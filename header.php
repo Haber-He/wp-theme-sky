@@ -67,7 +67,7 @@
 
     <?php wp_nav_menu(
     array(
-    'theme_location'  => '', //指定显示的导航名，如果没有设置，则显示第一个
+    'theme_location'  => 'header-menu', //指定显示的导航名，如果没有设置，则显示第一个
     'menu'            => 'header-menu',
     'container'       => 'nav', //最外层容器标签名
     'container_class' => 'main-menu', //最外层容器class名

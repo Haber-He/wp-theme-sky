@@ -7,8 +7,8 @@
             <p>This panel is active and ready for you to add some widgets via the WP Admin</p>
         </li>
 
-	<?php endif; ?>
-     
+    <?php endif; ?>
+       
     <li><h3>联系方式</h3>
      <div> 
       <a href="#"><img src="<?php bloginfo('template_url'); ?>/images/contact-us.jpg" width="228" alt="联系我们" title="联系我们" /></a> 
