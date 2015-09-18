@@ -23,61 +23,6 @@
             'after_title' => '</h3>',
     ));
 
-    /**
-     * Get menu object
-     * @param unknown_type $menu_loction
-     * @return Ambigous <mixed, boolean, WP_Error, multitype:, multitype:Ambigous <string, NULL> >
-     */
-    function get_menu_object($menu_location = ''){
-        $global = $menu_location.'_menu';
-        global $$global;
-        return $$global;
-    }
-    
-    function get_parent_menu($sibling=true,$menu_location=''){
-        $current_menu = $menu_location.'_current_menu';
-        global $$current_menu;
-        if ($$current_menu->menu_item_parent!='0'){
-            $menus = get_menu_object($menu_location);
-            if (empty($menus))
-                return false;
-            foreach ($menus as $item){
-                if ($item->ID == $$current_menu->menu_item_parent){
-                    return $item;
-                    break;
-                }
-            }
-        }
-        $parent_menu = empty($item) && $sibling?$$current_menu:'';
-        return apply_filters('get_parent_menu', $parent_menu);
-    }
-
-    /**
-     * 获取当前菜单的子菜单
-     * @param bool $sibling 如果当前菜单没有子菜单,则将同级菜单作为子菜单,默认false
-     * @param unknown_type $menu_loction
-     * @return boolean|Ambigous <multitype:unknown , unknown>
-     */
-    function get_children_menu($sibling=false,$menu_location=''){
-        $current_menu = $menu_location.'_current_menu';
-        global $$current_menu;
-        $menus = get_menu_object($menu_location);
-        if (empty($menus))
-            return false;
-        $children = array();
-        $siblings = array();
-        foreach ($menus as $item){
-            if ($item->menu_item_parent == $$current_menu->ID){
-                $children[] = $item;
-            }
-            if ($item->menu_item_parent == $$current_menu->menu_item_parent && $$current_menu->menu_item_parent!='0'){
-                $siblings[] = $item;
-            }
-        }
-        $children_list = empty($children) && $sibling ? $siblings : $children;
-        return apply_filters('get_children_menu', $children_list);
-    }
-    
     function par_pagenavi($range){   
         if ( is_singular() ) return;  
         global $wp_query, $paged;  
@@ -258,6 +203,14 @@
         if ( empty($template) ) $template = 'list';
         
         return $template;
+    }
+
+    function get_category_root($cat){
+        $this_category = get_category($cat);
+        while($this_category->category_parent){
+            $this_category = get_category($this_category->category_parent); 
+        }
+        return $this_category;
     }
     
 ?>
