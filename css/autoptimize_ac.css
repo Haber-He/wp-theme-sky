@@ -3161,3 +3161,8 @@ a:hover {
 		width: 95%
 	}
 }
+
+strong.search-excerpt { 
+color: #c00;
+font-weight: normal;
+}
