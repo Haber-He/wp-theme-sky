@@ -21,7 +21,7 @@
             'show_count'            => 0, //不显示分类日志数量
             'hide_empty'            => 1, //不显示没有日志的分类
             'use_desc_for_title'    => 1, //显示分类描述
-            'child_of'              => $root_id, //不限制子分类
+            'child_of'              => $root_id,
             'current_category'      => $cat_id,
             'feed'                  => '', //不显示feed
             'feed_image'            => '', //不显示feed图片
@@ -34,13 +34,32 @@
     
             wp_list_categories( $args ); 
         }
+        
+        if(is_page()){
+            
+            $page_root = get_page_root($post);
+            $root_id = $page_root->ID;
+            $root_name = $page_root->post_title;
+            
+            $args = array(      
+            'depth'       => 0,      
+            'show_date'   => '',      
+            'date_format' => get_option('date_format'),      
+            'child_of'    => $root_id,      
+            'exclude'     => '',      
+            'title_li'    => '<h3>'.$root_name.'</h3>',
+            'echo'        => 1,      
+            'authors'     => '',      
+            'sort_column' => 'menu_order, post_title',      
+            'link_before' => '',      
+            'link_after'  => '',      
+            'exclude_tree'=> '' );
+            
+            wp_list_pages( $args );
+        }
     ?>
     
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('widgetized-area')) : else : ?>
-        <li>
-            <p><strong>Widgetized Area</strong></p>
-            <p>This panel is active and ready for you to add some widgets via the WP Admin</p>
-        </li>
 
     <?php endif; ?>
        

@@ -1829,7 +1829,7 @@ a:hover {
 }
 
 .sidebar ul li ul {
-	padding: 10px;
+	padding: 10px 0 0 0;
 	border: 1px solid #e8e8e8;
 	background: #FFF;
 	overflow: hidden
@@ -1855,7 +1855,9 @@ a:hover {
 	overflow: hidden
 }
 
-.sidebar ul li.widget_nav_menu ul {
+.sidebar ul li.categories ul,
+.sidebar ul li.pagenav ul,
+ {
 	padding: 0;
 	font-size: 14px;
 	border: 0;
@@ -1868,7 +1870,9 @@ a:hover {
 	border-top-right-radius: 4px
 }
 
-.sidebar ul li.widget_nav_menu ul li {
+.sidebar ul li.categories ul li,
+.sidebar ul li.pagenav ul li
+ {
 	margin: 0;
 	padding: 0;
 	height: auto;
@@ -1877,7 +1881,11 @@ a:hover {
 	overflow: hidden
 }
 
-.sidebar ul li.widget_nav_menu ul li a:link,.sidebar ul li.widget_nav_menu ul li a:visited {
+.sidebar ul li.categories ul li a:link,
+.sidebar ul li.categories ul li a:visited,
+.sidebar ul li.pagenav ul li a:link,
+.sidebar ul li.pagenav ul li a:visited
+ {
 	height: 36px;
 	line-height: 36px;
 	text-indent: 25px;
@@ -1887,28 +1895,46 @@ a:hover {
 	overflow: hidden
 }
 
-.sidebar ul li.widget_nav_menu ul li a:hover,.sidebar ul li.widget_nav_menu ul li.current-cat a:link,.sidebar ul li.widget_nav_menu ul li.current-cat a:visited,.sidebar ul li.widget_nav_menu ul li.current_page_item a:link,.sidebar ul li.widget_nav_menu ul li.current_page_item a:visited,.sidebar ul li.widget_nav_menu ul a:hover,.sidebar ul li.widget_nav_menu ul li.current-cat a:hover {
+.sidebar ul li.categories ul li a:hover,
+.sidebar ul li.categories ul li.current-cat a:link,
+.sidebar ul li.categories ul li.current-cat a:visited,
+.sidebar ul li.categories ul li.current-cat a:hover,
+.sidebar ul li.categories ul a:hover,
+.sidebar ul li.pagenav ul li a:hover,
+.sidebar ul li.pagenav ul li.current_page_item a:link,
+.sidebar ul li.pagenav ul li.current_page_item a:visited,
+.sidebar ul li.pagenav ul li.current_page_item a:hover
+.sidebar ul li.pagenav ul a:hover
+{
 	color: #FFF;
 	background: #46a546 url(../images/icon.gif) no-repeat right -337px;
 	text-decoration: none
 }
 
-.sidebar ul li.widget_nav_menu ul li.page_item a:link,.sidebar ul li.widget_nav_menu ul li.page_item a:visited {
+.sidebar ul li.categories ul li.page_item a:link,
+.sidebar ul li.categories ul li.page_item a:visited,
+.sidebar ul li.pagenav ul li.page_item a:link,
+.sidebar ul li.pagenav ul li.page_item a:visited {
 	text-indent: 25px
 }
 
-.sidebar ul li.widget_nav_menu ul li ul {
+.sidebar ul li.categories ul li ul,
+.sidebar ul li.pagenav ul li ul {
 	border-radius: 0;
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0
 }
 
-.sidebar ul li.widget_nav_menu ul li ul li {
+.sidebar ul li.categories ul li ul li,
+.sidebar ul li.pagenav ul li ul li {
 	border-top: 1px solid #e4e4e4;
 	border-bottom: 0
 }
 
-.sidebar ul li.widget_nav_menu ul li ul li a:link,.sidebar ul li.widget_nav_menu ul li ul li a:visited {
+.sidebar ul li.categories ul li ul li a:link,
+.sidebar ul li.categories ul li ul li a:visited,
+.sidebar ul li.pagenav ul li ul li a:link,
+.sidebar ul li.pagenav ul li ul li a:visited {
 	text-indent: 40px
 }
 

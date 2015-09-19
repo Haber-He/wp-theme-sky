@@ -213,4 +213,12 @@
         return $this_category;
     }
     
+    function get_page_root($page){
+        $this_page = get_page($page);
+        while($this_page->post_parent){
+            $this_page = get_page($this_page->post_parent); 
+        }
+        return $this_page;
+    }
+    
 ?>
