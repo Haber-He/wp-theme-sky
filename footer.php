@@ -33,12 +33,27 @@ var _wpcf7 = {"loaderUrl":"<?php bloginfo('template_url'); ?>/images/ajax-loader
   <div class="cs-div cs-bar" style="top: 200px; right: 0px;"> 
    <span id="cs-close">X</span>
    <div class="cs-inner">
-    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
-        <img border="0" src="<?php bloginfo('template_url'); ?>/pa" alt="点击这里给我发消息" title="点击这里给我发消息" /></a> 
-    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
-        <img border="0" src="<?php bloginfo('template_url'); ?>/pa" alt="点击这里给我发消息" title="点击这里给我发消息" /></a> 
-    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
-        <img border="0" src="<?php bloginfo('template_url'); ?>/pa" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+    <ul>
+        <li>
+            <h2>加盟咨询</h2>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:454518542:47" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:454518542:47" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+        </li>
+        
+        <li>
+            <h2>技术支持</h2>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:454518542:47" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+        </li>
+        
+        <li>
+            <h2>技术支持</h2>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=454518542&site=qq&menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:454518542:47" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+        </li>
+    <ul>
    </div>
    <div class="cs-btm"></div>
   </div>
