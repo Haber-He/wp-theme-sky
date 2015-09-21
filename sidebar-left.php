@@ -2,10 +2,16 @@
    <ul>
              
     <?php 
-        if(is_category()){
+        if(is_category() || is_single()){
             
-            $cat = get_query_var('cat');
-            $yourcat = get_category($cat);
+            if(is_category()){
+                $cat = get_query_var('cat');
+                $yourcat = get_category($cat);             
+            }else if(is_single()){
+                $yourcat = get_the_category();
+                $yourcat = $yourcat[0];
+            }
+            
             $cat_id = $yourcat->term_id;
             
             $cat_root = get_category_root($yourcat);
@@ -57,6 +63,7 @@
             
             wp_list_pages( $args );
         }
+        
     ?>
     
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('widgetized-area')) : else : ?>
