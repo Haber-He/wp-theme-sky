@@ -3075,7 +3075,7 @@ a:hover {
 		width: 100%
 	}
 
-	.bx-pager,.announce h3,.weibo-box,.postlist li span,.sidebar,.cs-div,.backToTop {
+	.bx-pager,.announce h3,.weibo-box,.postlist li span,.sidebar,.cs-div {
 		display: none !important
 	}
 
