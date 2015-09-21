@@ -153,8 +153,8 @@ $(function(){
 });
 //BackTop
 $(function(){
-	var $backToTopTxt = "", $backToTopEle = $('<a class="backToTop" title="返回顶部"></a>').appendTo($("body"))
-		.text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+	var $backToTopTxt = "返回顶部", $backToTopEle = $('<a class="backToTop"></a>').appendTo($("body"))
+		.attr("title", $backToTopTxt).click(function() {
 			$("html, body").animate({ scrollTop: 0 }, 120);
 	}), $backToTopFun = function() {
 		var st = $(document).scrollTop(), winh = $(window).height();
@@ -164,5 +164,7 @@ $(function(){
 		}
 	};
 	$(window).bind("scroll", $backToTopFun);
-	$(function() { $backToTopFun(); });
+	$(function() { 
+        $backToTopFun(); 
+    });
 });

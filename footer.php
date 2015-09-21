@@ -60,10 +60,19 @@ var _wpcf7 = {"loaderUrl":"<?php bloginfo('template_url'); ?>/images/ajax-loader
 
 <script type="text/javascript">
 jQuery(document).ready(function(){
-	jQuery(function(){jQuery(".cs-div").css({"top":200+jQuery(window).scrollTop(),"right":"0"});jQuery(window).scroll(function(){var offsetTop=200+jQuery(window).scrollTop()+"px";jQuery(".cs-div").animate({top:offsetTop,"right":"0"},{duration:500,queue:false})});jQuery(window).resize(function(){var offsetTop=200+jQuery(window).scrollTop()+"px";jQuery(".cs-div").animate({top:offsetTop,"right":"0"},{duration:500,queue:false})});jQuery("#cs-close").click(function(){jQuery(".cs-inner").toggle();jQuery(".cs-div").toggleClass("cs-bar");});});
-});</script>
-
-<a class="backToTop" title="" style="display: none;"></a>
+	jQuery(function(){
+        jQuery(".cs-div").css({"top":200+jQuery(window).scrollTop(),"right":"0"});
+        jQuery(window).scroll(function(){
+            var offsetTop=200+jQuery(window).scrollTop()+"px";
+            jQuery(".cs-div").animate({top:offsetTop,"right":"0"},{duration:500,queue:false})});
+            jQuery(window).resize(function(){var offsetTop=200+jQuery(window).scrollTop()+"px";
+            jQuery(".cs-div").animate({top:offsetTop,"right":"0"},{duration:500,queue:false})});
+            jQuery("#cs-close").click(function(){
+                jQuery(".cs-inner").toggle();jQuery(".cs-div").toggleClass("cs-bar");
+            });
+        });
+});
+</script>
 
 </body>
 </html>
