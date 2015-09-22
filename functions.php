@@ -22,6 +22,17 @@
             'before_title' => '<h3>',
             'after_title' => '</h3>',
     ));
+    
+    add_filter('next_posts_link_attributes', 'next_link_attributes');
+    add_filter('previous_posts_link_attributes', 'previous_link_attributes');
+
+    function next_link_attributes() {
+        return 'class="previous" title="上一页"';
+    }
+    
+    function previous_link_attributes() {
+        return 'class="next" title="下一页"';
+    }
 
     function par_pagenavi($range){   
         if ( is_singular() ) return;  
@@ -42,7 +53,6 @@
                 echo '<a href="' . get_pagenum_link(1) . '" class="extend" title="跳转到首页">|<</a>';
             }
             
-            //echo '<a class="previous" href="'.previous_posts_link().'" title="上一页"><</a>';
             previous_posts_link('<');
             
             if ( empty( $range ) ) $range = get_option('posts_per_page');
