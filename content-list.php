@@ -5,7 +5,7 @@
         <li class="media">
             <div class="media-left">
               <a href="<?php the_permalink() ?>">
-                <img src="<?php post_thumbnail_src( 'thumb-list' ); ?>" class="img-thumbnail" alt="<?php the_title() ?>"/>
+                <img class="img-responsive img-thumbnail" src="<?php echo get_bloginfo("template_url") ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=100&w=150&q=90&zc=1&ct=1&a=t" alt="<?php the_title(); ?>" />
               </a>
                 
             </div>
@@ -15,8 +15,12 @@
                  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 140,"···");  ?>
               </span>
               <span class="media-meta">
-                <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d') ?></span>
-                <span><em class="glyphicon glyphicon-comment color"></em>2,678</span>
+                <span><em class="glyphicon glyphicon-time color"></em><?php the_time('Y-m-d H:i'); ?></span>
+                <span><em class="glyphicon glyphicon-comment color"></em>
+                  <a href="<?php get_comments_link() ?>">
+                    <?php echo get_comments_number('0', '1', '%'); ?>
+                  </a>
+                </span>
               </span>
               <a class="btn btn-default btn-sm hidden-xs" href="<?php the_permalink() ?>" role="button">阅读更多</a>
             </div>

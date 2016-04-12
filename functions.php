@@ -23,6 +23,9 @@
             'after_title' => '</h3>',
     ));
 
+    include('widgets/index.php');
+    include("bulletin-post-types.php");
+
     function par_pagenavi($range){   
         if ( is_singular() ) return;  
         global $wp_query, $paged;  
@@ -139,11 +142,17 @@
             } elseif ( is_single() ) {
                 $cat = get_the_category(); 
                 $cat = $cat[0];
-                echo '<li>'.get_category_parents($cat, TRUE, '</li><li>');
+                if (get_post_type() == "bulletin") {
+                    echo '<li>堂区公告</li>';
+                } else {
+                    echo '<li>'.get_category_parents($cat, TRUE, '</li><li>');
+                    echo '正文</li>';
+                }
+
                 // echo '<li><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>' . $delimiter;
-                echo $currentBefore;
-                the_title();
-                echo $currentAfter;
+                //echo $currentBefore;
+                //the_title();
+                //echo $currentAfter;
          
             } elseif ( is_page() && !$post->post_parent ) {
                 echo $currentBefore;
@@ -268,43 +277,77 @@
     if ( function_exists('add_theme_support') )add_theme_support('post-thumbnails');
 
     // set_post_thumbnail_size( 100, 100, true ); // 305 pixels wide by 380 pixels tall, set last parameter to true for hard crop mode 
-    add_image_size( 'thumb-index', 400, 267, true ); // Set thumbnail size 
-    add_image_size( 'thumb-list', 150, 100, true ); // Set thumbnail size 
-    add_image_size( 'thumb-pic', 250, 167, true ); // Set thumbnail size 
- 
-    function post_thumbnail_src($size){
+    //add_image_size( 'thumb-index', 400, 267, true ); // Set thumbnail size 
+    //add_image_size( 'thumb-list', 150, 100, true ); // Set thumbnail size 
+    //add_image_size( 'thumb-pic', 250, 167, true ); // Set thumbnail size 
+
+    //输出缩略图地址
+    function post_thumbnail_src(){
         global $post;
-        if( has_post_thumbnail() ){
-            switch($size){
-                case 'thumb-index':
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb-index');
-                    $post_thumbnail_src = $thumbnail_src [0];
-                    break;
-                case 'thumb-list':
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb-list');
-                    $post_thumbnail_src = $thumbnail_src [0];
-                    break;
-                case 'thumb-pic':
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb-pic');
-                    $post_thumbnail_src = $thumbnail_src [0];
-                    break;
-                default:
-                    break;
-            }
+        if( $values = get_post_custom_values("thumb") ) {   //输出自定义域图片地址
+            $values = get_post_custom_values("thumb");
+            $post_thumbnail_src = $values [0];
+        } elseif( has_post_thumbnail() ){    //如果有特色缩略图，则输出缩略图地址
+            $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
+            $post_thumbnail_src = $thumbnail_src [0];
         } else {
-            $post_thumbnail_src = ''; //如果没有缩略图获取随机图片
+            $post_thumbnail_src = '';
             ob_start();
             ob_end_clean();
             $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-            $post_thumbnail_src = $matches [1] [0];
-            if(empty($post_thumbnail_src)){
+            $post_thumbnail_src = $matches [1] [0];   //获取该图片 src
+            if(empty($post_thumbnail_src)){ //如果日志中没有图片，则显示随机图片
                 $random = mt_rand(1, 10);
-                echo '<?php bloginfo("template_url"); ?>'.'/img/pic/'.$random.'.jpg';
+                echo get_bloginfo('template_url');
+                echo '/img/pic/'.$random.'.jpg';
+                //如果日志中没有图片，则显示默认图片
+                //echo '/img/thumbnail.png';
             }
-        }
-
+        };
         echo $post_thumbnail_src;
     }
+
+    //时间显示方式‘xx以前’
+    function time_ago( $type = 'commennt', $day = 7 ) {
+      $d = $type == 'post' ? 'get_post_time' : 'get_comment_time';
+      if (time() - $d('U') > 60*60*24*$day) return;
+      echo ' (', human_time_diff($d('U'), strtotime(current_time('mysql', 0))), '前)';
+    }
+
+    //评论样式
+    function deel_comment_list($comment, $args, $depth) {
+      echo '<li '; comment_class(); echo ' id="comment-'.get_comment_ID().'">';
+
+      //头像
+      echo '<div class="c-avatar">';
+      //echo str_replace(' src=', ' data-original=', get_avatar( $comment->comment_author_email, $size = '54' , deel_avatar_default())); 
+      //内容
+      echo '<div class="c-main" id="div-comment-'.get_comment_ID().'">';
+        echo str_replace(' src=', ' data-original=', convert_smilies(get_comment_text()));
+        if ($comment->comment_approved == '0'){
+          echo '<span class="c-approved">您的评论正在排队审核中，请稍后！</span><br />';
+        }
+        //信息
+        echo '<div class="c-meta">';
+            echo '<span class="c-author">'.get_comment_author_link().'</span>';
+            echo get_comment_time('Y-m-d H:i '); echo time_ago(); 
+            if ($comment->comment_approved !== '0'){ 
+                echo comment_reply_link( array_merge( $args, array('add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); 
+            echo edit_comment_link(__('(编辑)'),' - ','');
+          } 
+        echo '</div>';
+      echo '</div></div>';
+    }
+
+    //remove google fonts
+    if (!function_exists('remove_wp_open_sans')) :
+        function remove_wp_open_sans() {
+            wp_deregister_style( 'open-sans' );
+            wp_register_style( 'open-sans', false );
+        }
+         add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
+         add_action('login_init', 'remove_wp_open_sans');
+    endif;
 
 
 ?>

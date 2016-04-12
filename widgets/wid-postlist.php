@@ -8,7 +8,7 @@ function d_postlists() {
 class d_postlist extends WP_Widget {
 	function d_postlist() {
 		$widget_ops = array( 'classname' => 'd_postlist', 'description' => '图文展示（最新文章+热门文章+随机文章）' );
-		$this->WP_Widget( 'd_postlist', 'Yusi-聚合文章', $widget_ops, $control_ops );
+		$this->WP_Widget( 'd_postlist', 'Church-聚合文章', $widget_ops, $control_ops );
 	}
 
 	function widget( $args, $instance ) {
@@ -99,7 +99,7 @@ function dtheme_posts_list($orderby,$limit,$cat,$img) {
 	query_posts($args);
 	while (have_posts()) : the_post(); 
 ?>
-<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><?php if( $img ){echo '<span class="thumbnail">';echo '<img src="'.get_bloginfo("template_url").'/timthumb.php?src=';echo post_thumbnail_src();echo '&h=64&w=100&q=90&zc=1&ct=1" alt="'.get_the_title().'" /></span>'; }else{$img = '';} ?><span class="text"><?php the_title(); ?></span><span class="muted"><?php the_time('Y-m-d');?></span><span class="muted"><?php comments_number('', '1评论', '%评论'); ?></span></a></li>
+<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><?php if( $img ){echo '<span class="thumbnail">';echo '<img src="'.get_bloginfo("template_url").'/timthumb.php?src=';echo post_thumbnail_src();echo '&h=64&w=100&q=90&zc=1&ct=1&a=t" alt="'.get_the_title().'" /></span>'; }else{$img = '';} ?><span class="text"><?php the_title(); ?></span><span class="muted"><?php the_time('Y-m-d');?></span><span class="muted"><?php comments_number('', '1评论', '%评论'); ?></span></a></li>
 <?php
 	
     endwhile; wp_reset_query();

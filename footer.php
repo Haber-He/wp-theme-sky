@@ -10,9 +10,9 @@
               </div>
               
               <div class="widget-content">
-                <p>地址：深圳市福田区农林路65号（公交站：市眼科医院；地铁2号线即蛇口线：侨香站）</p>
-                <p>电话：0755-83500887/0755-83703497</p>
-                <p>QQ群：29409231</p>
+                <p>地址：太原市小店区天惠苑小区门面房五号</p>
+                <p>电话：13453410502</p>
+                <p>QQ：454518542</p>
               </div>
             </div>
           </div>
@@ -39,10 +39,10 @@
               </div>
               <div class="widget-content">
                 <ul>
-                  <li><a href="#">思高版圣经</a></li>
-                  <li><a href="#">天主教教理</a></li>
-                  <li><a href="#">天主教法典</a></li>
-                  <li><a href="#">常用经文</a></li>
+                  <li><a href="http://www.cathassist.org/bible/bible/">思高版圣经</a></li>
+                  <li><a href="http://www.cathassist.org/catechism/content/">天主教教理</a></li>
+                  <li><a href="http://www.cathassist.org/codex/content/">天主教法典</a></li>
+                  <li><a href="http://www.cathassist.org/prayer/">常用经文</a></li>
                 </ul>
               </div>
             </div>
@@ -79,9 +79,12 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <p class="w3-link">Copyright © 2015 Catholic Assist. All Rights Reserved. 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
+            <p class="w3-link">© 2010-<?php echo date("Y");?> 天惠三晋. All Rights Reserved. 载入时间:<?php echo get_num_queries(); ?> 毫秒</p>
             <p>
-              网站开发设计：Haber <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=542143331&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:542143331:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+              <a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">
+                <?php echo get_option( 'zh_cn_l10n_icp_num' );?>
+              </a>
+               · 基于 WordPress · 开发运维 Haber <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=542143331&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:542143331:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
             </p>
           </div>
         </div>
