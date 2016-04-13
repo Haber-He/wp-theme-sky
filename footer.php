@@ -16,17 +16,17 @@
               </div>
             </div>
           </div>
+          
           <div class="col-xs-6 col-md-2">
             <div class="widget-container widget-footer boxed">
               <div class="widget-title">
-                <h4>应用下载</h4>
+                <h4>关于我们</h4>
               </div>
               <div class="widget-content">
                 <ul>
-                  <li><a href="http://bible.cathassist.org/">圣经小助手</a></li>
-                  <li><a href="http://www.cathassist.org/app/daily.html">日课小助手</a></li>
-                  <li><a href="http://www.cathassist.org/app/radio.html">电台小助手</a></li>
-                  <li><a href="http://app.cathassist.org/desc.html">天主教小助手</a></li>
+                  <li><a href="http://www.tianhuisanjin.com/profile/">公司简介</a></li>
+                  <li><a href="http://www.tianhuisanjin.com">联系我们</a></li>
+                  <li><a href="http://www.tianhuisanjin.com">留言咨询</a></li>
                 </ul>
               </div>
             </div>
@@ -35,30 +35,13 @@
           <div class="col-xs-6 col-md-2">
             <div class="widget-container widget-footer boxed">
               <div class="widget-title">
-                <h4>灵修小助手</h4>
+                <h4>加盟我们</h4>
               </div>
               <div class="widget-content">
                 <ul>
-                  <li><a href="http://www.cathassist.org/bible/bible/">思高版圣经</a></li>
-                  <li><a href="http://www.cathassist.org/catechism/content/">天主教教理</a></li>
-                  <li><a href="http://www.cathassist.org/codex/content/">天主教法典</a></li>
-                  <li><a href="http://www.cathassist.org/prayer/">常用经文</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-6 col-md-2">
-            <div class="widget-container widget-footer boxed">
-              <div class="widget-title">
-                <h4>关注我们</h4>
-              </div>
-              <div class="widget-content">
-                <ul>
-                  <li><a href="http://weibo.com/szsadn">QQ群</a></li>
-                  <li><a href="http://weibo.com/szsadn">新浪微博</a></li>
-                  <li><a href="http://t.qq.com/szsadn">腾讯微博</a></li>
-                  <li><a href="#">捐助我们</a></li>
+                  <li><a href="http://www.tianhuisanjin.com/category/product/">加盟项目</a></li>
+                  <li><a href="http://www.tianhuisanjin.com">加盟条件</a></li>
+                  <li><a href="http://www.tianhuisanjin.com">加盟流程</a></li>
                 </ul>
               </div>
             </div>

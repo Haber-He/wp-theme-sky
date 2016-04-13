@@ -8,7 +8,7 @@
               将临期-->
             </div>
             <div class="topbar-social">
-              <wb:follow-button uid="5066044867" type="red_2" width="136" height="24" ></wb:follow-button>
+              
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-              <img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="img-responsive" alt="天主教深圳圣安多尼堂"/>
+              <img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="img-responsive" alt=""/>
 
             </a>
           </div>

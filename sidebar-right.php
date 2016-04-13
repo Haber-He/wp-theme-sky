@@ -68,7 +68,7 @@
     ?>
 
     <?php
-      $yourcat = get_category_by_slug('catholic-saints');
+      $yourcat = get_category_by_slug('product');
       $cat_id = $yourcat->term_id;
 
       if ( !empty($cat_id) ):
@@ -133,7 +133,7 @@
     <?php endif; wp_reset_query();?>
 
     <?php
-      $yourcat = get_category_by_slug('catholic-news');
+      $yourcat = get_category_by_slug('company-news');
       $cat_id = $yourcat->term_id;
 
       if ( !empty($cat_id) ):
@@ -209,11 +209,6 @@
       </ul>
     </li>
     <?php endif; wp_reset_query();?>
-    
-    <li>
-      <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=5066044867&verifier=8b250d58&dpc=1"></iframe>
-    </li>
-
 
   </ul>
 
