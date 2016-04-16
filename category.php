@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
 
-            <div class="col-xs-12 col-md-8">
+            <div class="col-xs-12 col-md-9">
                 <div class="widget-container widget-news boxed boxed-border">
                     <div class="widget-title">
                         <h4><em class="glyphicon glyphicon-th-list color"></em><?php single_cat_title(); ?></h4>
@@ -47,7 +47,7 @@
           </div>
 
           <!-- sidebar -->
-          <div class="col-xs-12 col-md-4 visible-md-block visible-lg-block">
+          <div class="col-xs-12 col-md-3 visible-md-block visible-lg-block">
             <?php get_sidebar('right'); ?>
           </div>
           <!--/ sidebar -->
