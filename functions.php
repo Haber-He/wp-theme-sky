@@ -345,8 +345,9 @@
             wp_deregister_style( 'open-sans' );
             wp_register_style( 'open-sans', false );
         }
-         add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
-         add_action('login_init', 'remove_wp_open_sans');
+        add_action('init', 'remove_wp_open_sans');
+        add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
+        add_action('login_init', 'remove_wp_open_sans');
     endif;
 
 
